@@ -7,8 +7,12 @@ const sketch = (p: p5) => {
   };
 
   p.draw = () => {
-    p.rect(30, 30, 70, 70);
     p.fill(p.random(0, 255));
+    p.rect(30, 30, 70, 70);
+
+    const yellowFactor = p.random(0, 255);
+    p.fill(yellowFactor, yellowFactor, 0);
+    p.rect(20, 20, 50, 50);
   };
 };
 
