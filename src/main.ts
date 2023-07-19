@@ -8,11 +8,15 @@ const sketch = (p: p5) => {
 
   p.draw = () => {
     p.fill(p.random(0, 255));
-    p.rect(30, 30, 70, 70);
+    p.rect(30, 30, 60, 60);
 
     const yellowFactor = p.random(0, 255);
     p.fill(yellowFactor, yellowFactor, 0);
-    p.rect(20, 20, 50, 50);
+    p.rect(20, 20, 40, 40);
+
+    const complementaryYellowFactor = 255 - yellowFactor;
+    p.fill(complementaryYellowFactor, complementaryYellowFactor, 0);
+    p.rect(60, 60, 40, 40);
   };
 };
 
